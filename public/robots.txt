@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /test-og
+
+# Host
+Host: https://mehedims.com
+
+# Sitemaps
+Sitemap: https://mehedims.com/sitemap.xml
