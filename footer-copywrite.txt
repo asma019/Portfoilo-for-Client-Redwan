@@ -1,0 +1,307 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { FiYoutube, FiInstagram, FiFacebook, FiTwitter, FiArrowUp } from "react-icons/fi";
+import { useEffect, useState, useRef, MutableRefObject } from "react";
+
+// Define types for the SiteIntegrity component props
+interface SiteIntegrityProps {
+  c1: string; // credit text (encoded)
+  c2: string; // url (encoded)
+  r: MutableRefObject<HTMLAnchorElement | null>; // reference to verify
+}
+
+// Obfuscated component to make developer credit harder to remove
+const SiteIntegrity = ({ 
+  c1, // credit text (encoded)
+  c2, // url (encoded)
+  r // reference to verify
+}: SiteIntegrityProps) => {
+  useEffect(() => {
+    // This adds a side effect that would break site functionality if removed
+    const verifyIntegrity = () => {
+      if (!document.getElementById('site-integrity-verification') || 
+          !document.querySelector('[data-integrity-check]')) {
+        console.warn('Site integrity compromised');
+        // Could do something more drastic here like disable features
+      }
+    };
+    
+    verifyIntegrity();
+    window.addEventListener('resize', verifyIntegrity);
+    return () => window.removeEventListener('resize', verifyIntegrity);
+  }, []);
+  
+  // Decode with multiple layers to handle the complex encryption
+  const d = (s: string): string => {
+    try {
+      // Step 1: Base64 decode
+      const base64Decoded = Buffer.from(s, 'base64').toString();
+      
+      // Step 2: Hex decode
+      const hexDecoded = Buffer.from(base64Decoded, 'hex').toString();
+      
+      // Step 3: Reverse the string
+      const reversed = hexDecoded.split('').reverse().join('');
+      
+      // Step 4: Reverse character substitution (cipher)
+      return reversed.split('').map(char => {
+        const code = char.charCodeAt(0);
+        return String.fromCharCode(code - 3); // Reverse the Caesar cipher
+      }).join('');
+    } catch (e) {
+      console.warn('Decoding failed');
+      // Fallback values as a safety mechanism
+      return s.includes(c1) ? 'Developed by Mehedi' : 'https://mehedims.com/';
+    }
+  };
+  
+  return (
+    <a 
+      href={d(c2)} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="text-xs opacity-70 hover:opacity-100 transition-opacity"
+      ref={r}
+      data-integrity-check="ZGV2ZWxvcGVkYnltZWhlZGk"
+      data-site-validation="true"
+      onClick={(e) => {
+        // Add behavior that would be noticeable if removed
+        if (!document.getElementById('site-integrity-verification')) {
+          e.preventDefault();
+          alert('This site was developed by Mehedi. Visit: https://mehedims.com/');
+        }
+      }}
+    >
+      {d(c1)} | <span className="underline hover:text-blue-500 transition-colors">Visit Developer</span>
+    </a>
+  );
+};
+
+const Footer = () => {
+  const [developerCredit, setDeveloperCredit] = useState<string>("");
+  const [developerUrl, setDeveloperUrl] = useState<string>("");
+  const integrityRef = useRef<HTMLAnchorElement | null>(null);
+  
+  // Multi-layered encoding approach to hide data from simple inspection
+  useEffect(() => {
+    // Advanced multi-layer encryption with character manipulation and multiple encodings
+    const encodeMultiLayer = (text: string): string => {
+      // Step 1: Character substitution (simple cipher)
+      const substituted = text.split('').map(char => {
+        const code = char.charCodeAt(0);
+        return String.fromCharCode(code + 3); // Caesar cipher with shift of 3
+      }).join('');
+      
+      // Step 2: Reverse the string
+      const reversed = substituted.split('').reverse().join('');
+      
+      // Step 3: Convert to hex
+      const hexEncoded = Buffer.from(reversed).toString('hex');
+      
+      // Step 4: Base64 encode
+      return Buffer.from(hexEncoded).toString('base64');
+    };
+    
+    // Use hardcoded obfuscated values instead of plain text
+    // These strings are already separated into parts and manipulated to avoid easy detection
+    const devParts = ['Dev', 'elop', 'ed by', ' Me', 'hedi'];
+    const urlParts = ['ht', 'tps:/', '/', 'mehedi', 'ms.', 'com/'];
+    
+    // Combine parts with additional manipulation
+    const developerText = devParts.map((p, i) => i % 2 === 0 ? p : p.split('').join('')).join('');
+    const developerLink = urlParts.join('');
+    
+    // Encode with multi-layer approach
+    const encodedName = encodeMultiLayer(developerText);
+    const encodedLink = encodeMultiLayer(developerLink);
+    
+    setDeveloperCredit(encodedName);
+    setDeveloperUrl(encodedLink);
+    
+    // Add integrity check listener that would break functionality if element removed
+    const checkIntegrity = () => {
+      if (!integrityRef.current || !document.getElementById('site-integrity-verification')) {
+        console.error('Site integrity validation failed');
+        // Could do something that affects site functionality
+      }
+    };
+    
+    // Delayed check to ensure all elements are properly loaded
+    setTimeout(checkIntegrity, 2000);
+    
+    // Create additional elements that reference the integrity check
+    const metaTag = document.createElement('meta');
+    metaTag.setAttribute('name', 'developer');
+    metaTag.setAttribute('content', 'aWRlbS15Yi1kZXBvbGV2ZWQ='); // Obscured developer name
+    document.head.appendChild(metaTag);
+    
+    return () => {
+      // Cleanup but also make it harder to understand what's happening
+      document.head.removeChild(metaTag);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const socialLinks = [
+    {
+      name: "YouTube",
+      url: "https://www.youtube.com/@RDHJUNIOR926",
+      icon: <FiYoutube />,
+      color: "hover:text-red-500",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/rdhjunior109/",
+      icon: <FiInstagram />,
+      color: "hover:text-pink-500",
+    },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/profile.php?id=61556356408961",
+      icon: <FiFacebook />,
+      color: "hover:text-blue-600",
+    },
+    {
+      name: "Twitter",
+      url: "https://x.com/rdhjunior100",
+      icon: <FiTwitter />,
+      color: "hover:text-sky-500",
+    },
+  ];
+
+  const footerLinks = [
+    {
+      title: "Quick Links",
+      links: [
+        { name: "Home", href: "#hero" },
+        { name: "About", href: "#about" },
+        { name: "Experience", href: "#experience" },
+        { name: "Education", href: "#education" },
+      ],
+    },
+    {
+      title: "Services",
+      links: [
+        { name: "Esports Casting", href: "#" },
+        { name: "Tournament Commentary", href: "#" },
+        { name: "Game Analysis", href: "#" },
+        { name: "Event Hosting", href: "#" },
+      ],
+    },
+  ];
+
+  return (
+    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <div className="container mx-auto px-6 pt-12 pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          {/* Brand section */}
+          <div className="col-span-1 md:col-span-1">
+            <div className="flex flex-col space-y-4">
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-500 dark:to-blue-300 bg-clip-text text-transparent">
+                RDH JUNIOR
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
+              Professional esports caster delivering electrifying commentary, expert game analysis, and thrilling moments across competitive gaming tournaments worldwide.
+              </p>
+              
+              <div className="flex space-x-4 mt-2">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Follow on ${social.name}`}
+                    className={`w-9 h-9 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 ${social.color} hover:border-gray-300 dark:hover:border-gray-600 transition-colors`}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          {/* Links sections */}
+          {footerLinks.map((section, sectionIndex) => (
+            <div key={sectionIndex} className="col-span-1">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+                {section.title}
+              </h3>
+              <ul className="space-y-2">
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <a
+                      href={link.href}
+                      className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          
+          {/* Contact section */}
+          <div className="col-span-1">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+              Contact
+            </h3>
+            <div className="space-y-3 text-gray-600 dark:text-gray-400 text-sm">
+              <p>Dania College & University</p>
+              <p>Uttora, Sonir Akhra, Dhaka, Bangladesh</p>
+              <p>Email: ratulahmedreadhoan123@gmail.com</p>
+              <p>Phone: +8801623032821</p>
+            </div>
+          </div>
+        </div>
+        
+        {/* Scroll to top button */}
+        <div className="flex justify-center mt-10">
+          <button
+            onClick={scrollToTop}
+            aria-label="Scroll to top"
+            className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <FiArrowUp size={20} />
+          </button>
+        </div>
+        
+        {/* Copyright */}
+        <div className="border-t border-gray-200 dark:border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 dark:text-gray-400">
+          <div className="flex flex-col space-y-2">
+            <p>© {new Date().getFullYear()} Redwan Ahmed Ratul (RDH JUNIOR). All rights reserved.</p>
+            {developerCredit && developerUrl && (
+              <SiteIntegrity c1={developerCredit} c2={developerUrl} r={integrityRef} />
+            )}
+          </div>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Terms of Service</a>
+          </div>
+        </div>
+        
+        {/* Multiple hidden integrity checks with obfuscated data */}
+        <div 
+          className="hidden" 
+          id="site-integrity-verification" 
+          data-developer="bWVoZWRpbXMuY29t" 
+          aria-hidden="true"
+          // Add multiple encoded data attributes to make it harder to determine which ones matter
+          data-v1="ZGV2ZWxvcGVkLWJ5LW1laGVkaQ=="
+          data-v2="aHR0cHM6Ly9tZWhlZGltcy5jb20v"
+          data-v3="c2l0ZS1pbnRlZ3JpdHktdmFsaWRhdGlvbg=="
+        ></div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer; 
