@@ -1,147 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { FiYoutube, FiInstagram, FiFacebook, FiTwitter, FiArrowUp } from "react-icons/fi";
-import { useEffect, useState, useRef, MutableRefObject } from "react";
-
-// Define types for the SiteIntegrity component props
-interface SiteIntegrityProps {
-  c1: string; // credit text (encoded)
-  c2: string; // url (encoded)
-  r: MutableRefObject<HTMLAnchorElement | null>; // reference to verify
-}
-
-// Obfuscated component to make developer credit harder to remove
-const SiteIntegrity = ({ 
-  c1, // credit text (encoded)
-  c2, // url (encoded)
-  r // reference to verify
-}: SiteIntegrityProps) => {
-  useEffect(() => {
-    // This adds a side effect that would break site functionality if removed
-    const verifyIntegrity = () => {
-      if (!document.getElementById('site-integrity-verification') || 
-          !document.querySelector('[data-integrity-check]')) {
-        console.warn('Site integrity compromised');
-        // Could do something more drastic here like disable features
-      }
-    };
-    
-    verifyIntegrity();
-    window.addEventListener('resize', verifyIntegrity);
-    return () => window.removeEventListener('resize', verifyIntegrity);
-  }, []);
-  
-  // Decode with multiple layers to handle the complex encryption
-  const d = (s: string): string => {
-    try {
-      // Step 1: Base64 decode
-      const base64Decoded = Buffer.from(s, 'base64').toString();
-      
-      // Step 2: Hex decode
-      const hexDecoded = Buffer.from(base64Decoded, 'hex').toString();
-      
-      // Step 3: Reverse the string
-      const reversed = hexDecoded.split('').reverse().join('');
-      
-      // Step 4: Reverse character substitution (cipher)
-      return reversed.split('').map(char => {
-        const code = char.charCodeAt(0);
-        return String.fromCharCode(code - 3); // Reverse the Caesar cipher
-      }).join('');
-    } catch (e) {
-      console.warn('Decoding failed');
-      // Fallback values as a safety mechanism
-      return s.includes(c1) ? 'Developed by Mehedi' : 'https://mehedims.com/';
-    }
-  };
-  
-  return (
-    <a 
-      href={d(c2)} 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="text-xs opacity-70 hover:opacity-100 transition-opacity"
-      ref={r}
-      data-integrity-check="ZGV2ZWxvcGVkYnltZWhlZGk"
-      data-site-validation="true"
-      onClick={(e) => {
-        // Add behavior that would be noticeable if removed
-        if (!document.getElementById('site-integrity-verification')) {
-          e.preventDefault();
-          alert('This site was developed by Mehedi. Visit: https://mehedims.com/');
-        }
-      }}
-    >
-      {d(c1)} | <span className="underline hover:text-blue-500 transition-colors">Visit Developer</span>
-    </a>
-  );
-};
+import { useEffect } from "react";
 
 const Footer = () => {
-  const [developerCredit, setDeveloperCredit] = useState<string>("");
-  const [developerUrl, setDeveloperUrl] = useState<string>("");
-  const integrityRef = useRef<HTMLAnchorElement | null>(null);
-  
-  // Multi-layered encoding approach to hide data from simple inspection
-  useEffect(() => {
-    // Advanced multi-layer encryption with character manipulation and multiple encodings
-    const encodeMultiLayer = (text: string): string => {
-      // Step 1: Character substitution (simple cipher)
-      const substituted = text.split('').map(char => {
-        const code = char.charCodeAt(0);
-        return String.fromCharCode(code + 3); // Caesar cipher with shift of 3
-      }).join('');
-      
-      // Step 2: Reverse the string
-      const reversed = substituted.split('').reverse().join('');
-      
-      // Step 3: Convert to hex
-      const hexEncoded = Buffer.from(reversed).toString('hex');
-      
-      // Step 4: Base64 encode
-      return Buffer.from(hexEncoded).toString('base64');
-    };
-    
-    // Use hardcoded obfuscated values instead of plain text
-    // These strings are already separated into parts and manipulated to avoid easy detection
-    const devParts = ['Dev', 'elop', 'ed by', ' Me', 'hedi'];
-    const urlParts = ['ht', 'tps:/', '/', 'mehedi', 'ms.', 'com/'];
-    
-    // Combine parts with additional manipulation
-    const developerText = devParts.map((p, i) => i % 2 === 0 ? p : p.split('').join('')).join('');
-    const developerLink = urlParts.join('');
-    
-    // Encode with multi-layer approach
-    const encodedName = encodeMultiLayer(developerText);
-    const encodedLink = encodeMultiLayer(developerLink);
-    
-    setDeveloperCredit(encodedName);
-    setDeveloperUrl(encodedLink);
-    
-    // Add integrity check listener that would break functionality if element removed
-    const checkIntegrity = () => {
-      if (!integrityRef.current || !document.getElementById('site-integrity-verification')) {
-        console.error('Site integrity validation failed');
-        // Could do something that affects site functionality
-      }
-    };
-    
-    // Delayed check to ensure all elements are properly loaded
-    setTimeout(checkIntegrity, 2000);
-    
-    // Create additional elements that reference the integrity check
-    const metaTag = document.createElement('meta');
-    metaTag.setAttribute('name', 'developer');
-    metaTag.setAttribute('content', 'aWRlbS15Yi1kZXBvbGV2ZWQ='); // Obscured developer name
-    document.head.appendChild(metaTag);
-    
-    return () => {
-      // Cleanup but also make it harder to understand what's happening
-      document.head.removeChild(metaTag);
-    };
-  }, []);
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -158,19 +20,19 @@ const Footer = () => {
     },
     {
       name: "Instagram",
-      url: "#",
+      url: "https://www.instagram.com/rdhjunior109/",
       icon: <FiInstagram />,
       color: "hover:text-pink-500",
     },
     {
       name: "Facebook",
-      url: "#",
+      url: "https://www.facebook.com/profile.php?id=61556356408961",
       icon: <FiFacebook />,
       color: "hover:text-blue-600",
     },
     {
       name: "Twitter",
-      url: "#",
+      url: "https://x.com/rdhjunior100",
       icon: <FiTwitter />,
       color: "hover:text-sky-500",
     },
@@ -184,14 +46,12 @@ const Footer = () => {
         { name: "About", href: "#about" },
         { name: "Experience", href: "#experience" },
         { name: "Education", href: "#education" },
-        { name: "Portfolio", href: "#projects" },
-        { name: "Contact", href: "#contact" },
       ],
     },
     {
       title: "Services",
       links: [
-        { name: "E-sports Casting", href: "#" },
+        { name: "Esports Casting", href: "#" },
         { name: "Tournament Commentary", href: "#" },
         { name: "Game Analysis", href: "#" },
         { name: "Event Hosting", href: "#" },
@@ -210,9 +70,9 @@ const Footer = () => {
                 RDH JUNIOR
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Professional e-sports caster delivering electrifying commentary and expert game analysis.
+                Professional esports caster delivering electrifying commentary, expert game analysis, and thrilling moments across competitive gaming tournaments worldwide.
               </p>
-              
+
               <div className="flex space-x-4 mt-2">
                 {socialLinks.map((social, index) => (
                   <a
@@ -229,7 +89,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Links sections */}
           {footerLinks.map((section, sectionIndex) => (
             <div key={sectionIndex} className="col-span-1">
@@ -250,7 +110,7 @@ const Footer = () => {
               </ul>
             </div>
           ))}
-          
+
           {/* Contact section */}
           <div className="col-span-1">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
@@ -258,13 +118,13 @@ const Footer = () => {
             </h3>
             <div className="space-y-3 text-gray-600 dark:text-gray-400 text-sm">
               <p>Dania College & University</p>
-              <p>Sonir Akhra, Dhaka, Bangladesh</p>
+              <p>Uttora, Sonir Akhra, Dhaka, Bangladesh</p>
               <p>Email: ratulahmedreadhoan123@gmail.com</p>
               <p>Phone: +8801623032821</p>
             </div>
           </div>
         </div>
-        
+
         {/* Scroll to top button */}
         <div className="flex justify-center mt-10">
           <button
@@ -275,35 +135,20 @@ const Footer = () => {
             <FiArrowUp size={20} />
           </button>
         </div>
-        
+
         {/* Copyright */}
         <div className="border-t border-gray-200 dark:border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 dark:text-gray-400">
           <div className="flex flex-col space-y-2">
             <p>© {new Date().getFullYear()} Redwan Ahmed Ratul (RDH JUNIOR). All rights reserved.</p>
-            {developerCredit && developerUrl && (
-              <SiteIntegrity c1={developerCredit} c2={developerUrl} r={integrityRef} />
-            )}
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Terms of Service</a>
           </div>
         </div>
-        
-        {/* Multiple hidden integrity checks with obfuscated data */}
-        <div 
-          className="hidden" 
-          id="site-integrity-verification" 
-          data-developer="bWVoZWRpbXMuY29t" 
-          aria-hidden="true"
-          // Add multiple encoded data attributes to make it harder to determine which ones matter
-          data-v1="ZGV2ZWxvcGVkLWJ5LW1laGVkaQ=="
-          data-v2="aHR0cHM6Ly9tZWhlZGltcy5jb20v"
-          data-v3="c2l0ZS1pbnRlZ3JpdHktdmFsaWRhdGlvbg=="
-        ></div>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;

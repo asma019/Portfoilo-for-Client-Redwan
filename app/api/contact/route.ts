@@ -74,7 +74,7 @@ ${message}
         </td>
         <td style="padding-left: 15px; text-align: left;">
           <div style="font-size: 18px; font-weight: bold; color: #333;">Redwan Ahmed Ratul</div>
-          <div style="font-size: 12px; color: #666;">E-sports Caster</div>
+          <div style="font-size: 12px; color: #666;">Esports Caster</div>
         </td>
       </tr>
     </table>

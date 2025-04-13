@@ -36,7 +36,7 @@ const Hero = () => {
               </h1>
               <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-gray-700 dark:text-gray-300">
                 <span className="relative">
-                  E-sports Caster (RDH JUNIOR)
+                  Esports Caster (RDH JUNIOR)
                   <div className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-500 dark:to-blue-300 rounded-full"></div>
                 </span>
               </h2>
@@ -52,7 +52,7 @@ const Hero = () => {
                 <FiMic className="mr-1" /> Commentary
               </span>
               <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 shadow-sm">
-                <FiVideo className="mr-1" /> E-sports
+                <FiVideo className="mr-1" /> Esports
               </span>
               <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 shadow-sm">
                 <FiBriefcase className="mr-1" /> Professional
@@ -65,7 +65,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-lg text-gray-600 dark:text-gray-400 max-w-lg mb-8 leading-relaxed"
             >
-              Dynamic e-sports caster with a proven track record at Liquid Esports, delivering rapid analytical 
+              Dynamic Esports caster with a proven track record at Liquid Esports, delivering rapid analytical 
               commentary and electrifying play-by-play action. Renowned for my engaging storytelling and 
               expert insights, I excel in high-pressure environments, captivating audiences while showcasing 
               instant game sense and clarity.
@@ -85,13 +85,13 @@ const Hero = () => {
                 <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
               <a 
-                href="https://www.youtube.com/@RDHJUNIOR926" 
-                target="_blank"
+                href="/public/RatulCV.pdf" 
+                download="RatulCV.pdf"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-medium rounded-full shadow-md hover:shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 flex items-center group hover:bg-gray-50 dark:hover:bg-gray-700"
               >
-                YouTube Channel
-                <FiVideo className="ml-2 group-hover:translate-y-1 transition-transform duration-300" />
+                  Download CV
+                <FiDownload className="ml-2 group-hover:translate-y-1 transition-transform duration-300" />
               </a>
             </motion.div>
           </motion.div>
@@ -109,7 +109,7 @@ const Hero = () => {
               
               <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl z-10">
                 <Image
-                  src="/images/profile.jpeg"
+                  src="/images/profile.jpg"
                   alt="Redwan Ahmed Ratul"
                   fill
                   sizes="(max-width: 768px) 288px, 384px"

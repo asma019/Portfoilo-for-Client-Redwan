@@ -6,32 +6,32 @@ import { FiBookOpen, FiCalendar, FiMapPin, FiAward } from "react-icons/fi";
 const Education = () => {
   const education = [
     {
-      degree: "Under Graduate",
+      degree: "HSC",
       institution: "Dania College & University",
-      location: "Sonir Akhra, Dhaka",
-      period: "Present",
-      description: "Currently pursuing undergraduate studies while balancing my professional career as an e-sports caster.",
+      location: "Uttara 1230, Dhaka",
+      period: "2024-Present",
+      description: "Currently pursuing undergraduate studies while balancing my professional career as an Esports caster.",
       achievements: [],
     },
     {
-      degree: "HSC",
-      institution: "Dania College & University",
-      location: "Sonir Akhra, Dhaka",
-      period: "Completed",
-      description: "Completed Higher Secondary Certificate with a focus on developing communication and presentation skills that have proven valuable in my e-sports casting career.",
+      degree: "SSC",
+      institution: "Purba Jalkuri Adarsha High School",
+      location: "Uttara 1230, Dhaka",
+      period: "2018-2023",
+      description: "Completed Secondary School Certificate with a focus on developing communication and presentation skills that have proven valuable in my Esports casting career.",
       achievements: [],
     }
   ];
 
   const certifications = [
     {
-      title: "Professional E-sports Commentary",
+      title: "Professional Esports Commentary",
       issuer: "Liquid Esports",
       date: "2023",
       credential: "In-house certification"
     },
     {
-      title: "Game Analysis and Broadcasting",
+      title: "Game Analysis and Coach",
       issuer: "Discovery One",
       date: "2024",
       credential: "Professional training"
@@ -52,8 +52,8 @@ const Education = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 rounded-full mb-4">Education</span>
-          <h2 className="heading-lg text-gray-900 dark:text-white mb-4">Academic Background</h2>
+          <span className="inline-block px-3 py-1 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 rounded-full mb-4">Academic Journey</span>
+          <h2 className="heading-lg text-gray-900 dark:text-white mb-4">Education</h2>
           <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
         </motion.div>
         

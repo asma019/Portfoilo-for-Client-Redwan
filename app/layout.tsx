@@ -12,9 +12,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Redwan Ahmed Ratul | E-sports Caster | RDH JUNIOR",
-  description: "Dynamic e-sports caster with a proven track record at Liquid Esports, delivering rapid analytical commentary and electrifying play-by-play action.",
-  keywords: ["Redwan Ahmed Ratul", "RDH JUNIOR", "E-sports Caster", "Gaming Commentary", "Esports", "Play-by-play", "EA FC Mobile", "Free Fire", "Efootball"],
+  title: "Redwan Ahmed Ratul (RDH JUNIOR)",
+  description: "Dynamic Esports caster with a proven track record at Liquid Esports, delivering rapid analytical commentary and electrifying play-by-play action.",
+  keywords: ["Redwan Ahmed Ratul", "RDH JUNIOR", "Esports Caster", "Gaming Commentary", "Esports", "Play-by-play", "EA FC Mobile", "Free Fire", "Efootball"],
   authors: [{ name: "Redwan Ahmed Ratul", url: "https://www.youtube.com/@RDHJUNIOR926" }],
   creator: "Redwan Ahmed Ratul",
   metadataBase: new URL("https://mehedims.com"),
@@ -37,22 +37,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://mehedims.com",
-    title: "Redwan Ahmed Ratul | E-sports Caster | RDH JUNIOR",
-    description: "Dynamic e-sports caster with a proven track record at Liquid Esports, delivering rapid analytical commentary and electrifying play-by-play action.",
-    siteName: "Redwan Ahmed Ratul | E-sports Caster | RDH JUNIOR",
+    title: "Redwan Ahmed Ratul (RDH JUNIOR)",
+    description: "Dynamic Esports caster with a proven track record at Liquid Esports, delivering rapid analytical commentary and electrifying play-by-play action.",
+    siteName: "Redwan Ahmed Ratul (RDH JUNIOR)",
     images: [
       {
         url: "/images/socialshare.png",
         width: 1200,
         height: 630,
-        alt: "Redwan Ahmed Ratul - E-sports Caster",
+        alt: "Redwan Ahmed Ratul - Esports Caster",
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Redwan Ahmed Ratul | E-sports Caster | RDH JUNIOR",
-    description: "Dynamic e-sports caster with a proven track record at Liquid Esports, delivering rapid analytical commentary and electrifying play-by-play action.",
+    title: "Redwan Ahmed Ratul (RDH JUNIOR)",
+    description: "Dynamic Esports caster with a proven track record at Liquid Esports, delivering rapid analytical commentary and electrifying play-by-play action.",
     images: ["/images/socialshare.png"],
     creator: "@RDHJUNIOR926",
   },

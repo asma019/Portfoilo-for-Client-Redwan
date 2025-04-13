@@ -1,6 +1,6 @@
 # Portfolio - Redwan Ahmed Ratul (RDH JUNIOR)
 
-A modern, performance-optimized portfolio website built with Next.js and Tailwind CSS, designed to showcase an e-sports caster's work, achievements, and skills with a seamless user experience.
+A modern, performance-optimized portfolio website built with Next.js and Tailwind CSS, designed to showcase an Esports caster's work, achievements, and skills with a seamless user experience.
 
 [![GitHub stars](https://img.shields.io/github/stars/asma019/NodeJs-Portfolio-Mehedi-Hasan?style=social)](https://github.com/asma019/NodeJs-Portfolio-Mehedi-Hasan/stargazers) [![Latest Release](https://img.shields.io/github/v/release/asma019/NodeJs-Portfolio-Mehedi-Hasan?style=flat-square)](https://github.com/asma019/NodeJs-Portfolio-Mehedi-Hasan/releases/tag/v)
 
@@ -28,7 +28,7 @@ A modern, performance-optimized portfolio website built with Next.js and Tailwin
 - [Contributing](#contributing)
 - [License](#license)
 - [Generating PDF CV](#generating-pdf-cv)
-- [E-sports Casting Portfolio](#e-sports-casting-portfolio)
+- [Esports Casting Portfolio](#Esports-casting-portfolio)
 
 ## ✨ Features
 
@@ -39,7 +39,7 @@ A modern, performance-optimized portfolio website built with Next.js and Tailwin
 - **SEO Friendly**: Meta tags, Open Graph, Twitter Cards, and structured data
 - **Functional Contact Form**: SMTP email integration
 - **YouTube Integration**: Showcasing casting videos and highlights
-- **E-sports Focus**: Sections designed to highlight casting achievements
+- **Esports Focus**: Sections designed to highlight casting achievements
 - **Progressive Web App (PWA)**: Installable on mobile devices
 - **Accessibility**: WCAG compliant for better user experience
 - **Typescript**: Type-safe code for better development experience
@@ -299,7 +299,7 @@ portfolio/
 
 ### Personal Information
 
-This portfolio is specifically tailored for e-sports casting. Edit your personal information in the following files:
+This portfolio is specifically tailored for Esports casting. Edit your personal information in the following files:
 
 - **Contact Information**: `app/sections/Contact.tsx`
 - **About Me**: `app/sections/About.tsx`
@@ -323,17 +323,17 @@ This portfolio is specifically tailored for e-sports casting. Edit your personal
 2. Import and add it to `app/page.tsx`
 3. Add a navigation link in `app/components/Navbar.tsx`
 
-## 🎮 E-sports Casting Portfolio
+## 🎮 Esports Casting Portfolio
 
-This portfolio is specifically tailored for Redwan Ahmed Ratul (RDH JUNIOR), a professional e-sports caster based in Dhaka, Bangladesh. The website includes:
+This portfolio is specifically tailored for Redwan Ahmed Ratul (RDH JUNIOR), a professional Esports caster based in Dhaka, Bangladesh. The website includes:
 
 - **Casting Highlights**: A curated selection of the best casting moments
-- **Experience Timeline**: Showcasing work with major e-sports organizations like Discovery One, Arekta Gaming, Zenetic Esports, and Liquid Esports
+- **Experience Timeline**: Showcasing work with major Esports organizations like Discovery One, Arekta Gaming, Zenetic Esports, and Liquid Esports
 - **YouTube Integration**: Direct embedding of casting videos and highlights
-- **Professional Presentation**: Modern design elements that reflect the dynamic nature of e-sports
+- **Professional Presentation**: Modern design elements that reflect the dynamic nature of Esports
 - **Contact Information**: Professional channels for business inquiries and casting opportunities
 
-The design focuses on showcasing Redwan's unique casting style, professional experience, and brand identity within the e-sports community.
+The design focuses on showcasing Redwan's unique casting style, professional experience, and brand identity within the Esports community.
 
 ## 🤝 Contributing
 
@@ -354,13 +354,13 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Check out the [latest release](https://github.com/asma019/NodeJs-Portfolio-Mehedi-Hasan/releases/tag/v) for the most up-to-date version.
 
 ### Recent Updates
-- Converted web developer portfolio to e-sports caster portfolio for Redwan Ahmed Ratul (RDH JUNIOR)
+- Converted web developer portfolio to Esports caster portfolio for Redwan Ahmed Ratul (RDH JUNIOR)
 - Added YouTube video integration for showcasing casting highlights
-- Updated experience section with e-sports organizations (Discovery One, Arekta Gaming, Zenetic Esports, Liquid Esports)
+- Updated experience section with Esports organizations (Discovery One, Arekta Gaming, Zenetic Esports, Liquid Esports)
 - Enhanced mobile responsiveness with updated UI elements
-- Improved contact form with e-sports-specific email templates
+- Improved contact form with Esports-specific email templates
 - Added modern slanted design for image presentations using clip-path
-- Updated all metadata and SEO elements for e-sports casting focus
+- Updated all metadata and SEO elements for Esports casting focus
 
 ## 📄 Generating PDF CV
 

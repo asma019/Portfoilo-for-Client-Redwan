@@ -6,15 +6,17 @@ import Image from "next/image";
 
 const About = () => {
   const skills = [
-    { name: "Rapid Analytical Commentary", level: 90 },
-    { name: "Conciseness", level: 85 },
-    { name: "Engaging Tone and Energy", level: 95 },
-    { name: "Clarity under Pressure", level: 85 },
-    { name: "Instant Game Sense", level: 90 },
-    { name: "Contextual Knowledge", level: 80 },
-    { name: "EA FC Mobile", level: 85 },
-    { name: "Free Fire", level: 90 },
-    { name: "EFootball", level: 85 },
+    { name: "Free Fire", level: 95},
+    { name: "Call of Duty: Mobile", level: 90},
+    { name: "Valorant", level: 85 },
+    { name: "Mobile Legends: Bang Bang", level: 80},
+    { name: "Pubg Mobile", level: 80},
+    { name: "EA FC Mobile", level: 80},
+    { name: "EFootball", level: 80},
+    { name: "Chess", level: 80 },
+    { name: "Farlight 84", level: 75},
+    { name: "Counter-Strike 2", level: 70},
+
   ];
 
   const categories = [
@@ -26,7 +28,7 @@ const About = () => {
     {
       icon: <FiVideo size={24} />,
       title: "Gaming Expertise",
-      skills: ["EA FC Mobile", "Free Fire", "EFootball"],
+      skills: ["Free Fire", "Pubg Mobile", "Call of Duty: Mobile", "Valorant"],
     },
     {
       icon: <FiRadio size={24} />,
@@ -36,7 +38,7 @@ const About = () => {
     {
       icon: <FiGlobe size={24} />,
       title: "Platforms",
-      skills: ["YouTube", "Twitch", "Tournament Broadcasts"],
+      skills: ["YouTube", "Facebook", "Twitch"],
     },
   ];
 
@@ -89,7 +91,7 @@ const About = () => {
               >
                 <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-2xl group">
                   <Image
-                    src="/images/profile.jpeg"
+                    src="/images/profile2.jpeg"
                     alt="Redwan Ahmed Ratul"
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
@@ -100,7 +102,7 @@ const About = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <h4 className="text-2xl font-bold text-white mb-1">RDH JUNIOR</h4>
                     <p className="text-blue-300 flex items-center">
-                      <FiMic className="mr-2" /> Professional E-sports Caster
+                      <FiMic className="mr-2" /> Professional Esports Caster
                     </p>
                   </div>
                 </div>
@@ -120,9 +122,7 @@ const About = () => {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className="paragraph text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative z-10"
                 >
-                  I am a dynamic e-sports caster with a proven track record at Liquid Esports, delivering rapid analytical 
-                  commentary and electrifying play-by-play action for competitive gaming events. With years of experience
-                  in the esports industry, I've developed a reputation for engaging storytelling and expert game insights.
+                  Hello My name is Redwan Ahmed Ratul(RDH JUNIOR). I am a dynamic e-sports caster with a proven track record at Liquid Esports, delivering rapid analytical commentary and electrifying play-by-play action for competitive gaming events.My casting Discovery one,Zenetic esports,Arekta gaming,RTB esports Started From 2022. With years of experience in the esports industry, I've developed a reputation for engaging storytelling and expert game insights.
                 </motion.p>
                 
                 <motion.p 
@@ -132,9 +132,7 @@ const About = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="paragraph text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative z-10"
                 >
-                  Currently working with multiple esports organizations, I specialize in EA FC Mobile, EFootball, and Free Fire
-                  competitions. I'm an undergraduate student at Dania College & University in Sonir Akhra, Dhaka, balancing my 
-                  education with my passion for esports casting.
+                  Currently working with multiple esports organizations Like Liquid Esports, Discovery one,Zenetic esports,Arekta gaming,RTB esports I specialize in EA FC Mobile, EFootball, and Free Fire competitions. I'm an undergraduate student at Dania College & University in Sonir Akhra, Dhaka, balancing my education with my passion for esports casting.
                 </motion.p>
                 
                 <motion.p 
@@ -144,9 +142,7 @@ const About = () => {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="paragraph text-gray-600 dark:text-gray-400 leading-relaxed relative z-10"
                 >
-                  I excel in high-pressure environments, captivating audiences while showcasing instant game sense and clarity.
-                  My distinctive style combines technical understanding with an engaging energy that keeps viewers on the 
-                  edge of their seats during every match. I am passionate about competitive gaming and igniting excitement in every match.
+                  I excel in high-pressure environments, captivating audiences while showcasing instant game sense and clarity. My distinctive style combines technical understanding with an engaging energy that keeps viewers on the edge of their seats during every match. I am passionate about competitive gaming and igniting excitement in every match.
                 </motion.p>
               </div>
             </div>
@@ -163,8 +159,8 @@ const About = () => {
                   <FiBriefcase size={20} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">E-sports Caster</h4>
-                  <p className="text-gray-600 dark:text-gray-400">Professional Commentary</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Esports Caster</h4>
+                  <p className="text-gray-600 dark:text-gray-400">Professional Caster</p>
                 </div>
               </motion.div>
               
@@ -179,8 +175,8 @@ const About = () => {
                   <FiGlobe size={20} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Code Name</h4>
-                  <p className="text-gray-600 dark:text-gray-400">RDH JUNIOR</p>
+                  <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Experience</h4>
+                  <p className="text-gray-600 dark:text-gray-400">3+ Years in Commentary</p>
                 </div>
               </motion.div>
             </div>

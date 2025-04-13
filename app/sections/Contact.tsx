@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FiMail, FiPhone, FiMapPin, FiSend, FiArrowRight, FiCheck, FiAlertCircle, FiYoutube, FiInstagram, FiFacebook } from "react-icons/fi";
+import { FiLinkedin } from "react-icons/fi";
+
 
 const Contact = () => {
   const formName = "MehediMS"; // Form name to keep it consistent with the API
@@ -69,14 +71,14 @@ const Contact = () => {
     {
       icon: <FiPhone size={22} />,
       label: "Phone",
-      value: "01623032821",
-      link: "tel:01623032821",
+      value: "+8801623032821",
+      link: "tel:+8801623032821",
     },
     {
       icon: <FiMapPin size={22} />,
       label: "Location",
-      value: "Dhaka, 1230 BD",
-      link: "https://maps.google.com/?q=Dhaka+1230+Bangladesh",
+      value: "Uttara 1230, Dhaka, Bangladesh",
+      link: "https://maps.google.com/?q=Uttara 1230, Dhaka, Bangladesh",
     },
   ];
 
@@ -98,7 +100,7 @@ const Contact = () => {
           <h2 className="heading-lg text-gray-900 dark:text-white mb-4">Get In Touch</h2>
           <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
           <p className="paragraph text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-4">
-            Looking for a dynamic e-sports caster for your next event? 
+            Looking for a dynamic Esports caster for your next event? 
             I'd love to bring excitement and expert commentary to your broadcast!
           </p>
         </motion.div>
@@ -164,6 +166,15 @@ const Contact = () => {
                 <div className="h-px flex-grow bg-gradient-to-r from-gray-200 to-transparent dark:from-gray-700 ml-4"></div>
               </div>
               <div className="flex justify-center space-x-4 md:space-x-5">
+              <a
+                href="https://www.linkedin.com/in/rdhjunior/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 active:scale-95"
+              >
+                <FiLinkedin size={20} className="md:text-xl" />
+              </a>
+
                 <a
                   href="https://www.youtube.com/@RDHJUNIOR926"
                   target="_blank"
@@ -173,7 +184,7 @@ const Contact = () => {
                   <FiYoutube size={20} className="md:text-xl" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/rdhjunior109/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 active:scale-95"
@@ -181,7 +192,7 @@ const Contact = () => {
                   <FiInstagram size={20} className="md:text-xl" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61556356408961"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-800 hover:to-blue-700 text-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 active:scale-95"
@@ -214,7 +225,6 @@ const Contact = () => {
                       Send Me a Message
                     </h3>
                     <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
-                      Form: {formName}
                     </p>
                   </div>
                 </div>

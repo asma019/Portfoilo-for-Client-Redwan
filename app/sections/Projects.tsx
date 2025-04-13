@@ -18,57 +18,57 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-sports Live Commentary",
-      description: "Delivered high-energy live commentary for this major e-sports tournament, providing detailed game analysis and play-by-play action.",
-      image: "/images/project1.jpg",
-      demo: "https://www.youtube.com/live/kiubB7r1biQ?si=apg_8fkULzENz3zA",
-      category: "live",
-      tags: ["Live", "E-sports", "Commentary"],
+      title: "The fall of Bangladesh’s TOP 1 team? What’s really going on?",
+      description: "In this video, we analyze their performance, team issues, and the possibility of a strong comeback in the future.",
+      image: "/images/TOP 1.jpg",
+      demo: "https://www.youtube.com/watch?v=IhsNm4CYWUM",
+      category: "video",
+      tags: ["Video", "Esports", "analyze"],
     },
     {
       id: 2,
-      title: "Tournament Finals Cast",
-      description: "Provided expert analysis and exciting commentary during the championship finals, keeping viewers engaged throughout the intense matchup.",
-      image: "/images/project2.jpg",
-      demo: "https://www.youtube.com/live/yzVKLOKqbxg",
+      title: "Ramadan Squad Cup 2025",
+      description: "Ramadan Squad Cup 2025 | How to register for the tournament? Watch the full step-by-step guide and join now!",
+      image: "/images/Ramadan Squad Cup 2025.jpg",
+      demo: "https://www.youtube.com/watch?v=ahOYBVXhlMc",
       category: "tournament",
-      tags: ["Finals", "Commentary", "Analysis"],
+      tags: ["Finals", "Tournament", "Analysis"],
     },
     {
       id: 3,
-      title: "RDH JUNIOR YouTube Channel",
-      description: "My official YouTube channel featuring various e-sports casting highlights, commentary tutorials, and gaming content.",
-      image: "/images/project3.jpg",
-      demo: "https://www.youtube.com/@RDHJUNIOR926",
+      title: "TOP 5 RUSHERS in Free Fire",
+      description: " Discover the TOP 5 Rushers in Free Fire from the Bangladesh Esports Community! 🇧🇩 These aggressive players are dominating the battlefield with insane gameplay and clutch moments. Watch till the end to find out who made it to the top!",
+      image: "/images/TOP 5 RUSHERS in Free Fire.jpg",
+      demo: "https://www.youtube.com/watch?v=hkbwqH8VyS4",
       category: "feature",
       tags: ["YouTube", "Casting", "Portfolio"],
     },
     {
       id: 4,
-      title: "EA FC Mobile Tournament",
-      description: "Commentary for EA FC Mobile competitive matches, providing insights into player strategies and game mechanics.",
-      image: "/images/project4.jpg",
-      demo: "#",
+      title: "Free Fire Lan Tournament 2025",
+      description: "Featuring the LQD x T4B Offline Showdown, this tournament brings together the best Free Fire teams for an intense battle of skill and strategy.",
+      image: "/images/Free Fire Lan Tournament 2025.jpg",
+      demo: "https://www.youtube.com/watch?v=1FM7_-cXEr4",
       category: "tournament",
-      tags: ["EA FC Mobile", "Tournament", "Mobile Gaming"],
+      tags: ["Free Fire", "Tournament", "Mobile Gaming"],
     },
     {
       id: 5,
-      title: "Free Fire Championship",
-      description: "Energetic play-by-play commentary for the Free Fire Championship, capturing all the action and excitement.",
-      image: "/images/project5.jpg",
-      demo: "#",
+      title: "Free Fire Top 5 Influencer Esports Players",
+      description: "Top 5 Influencer Esports Players in Bangladesh! Who is the most powerful? Free Fire Bangladesh's esports community is growing day by day.",
+      image: "/images/Free Fire Top 5 Influencer Esports Players.jpg",
+      demo: "https://www.youtube.com/watch?v=nQ-wW8wkyGA",
       category: "tournament",
       tags: ["Free Fire", "Championship", "Battle Royale"],
     },
     {
       id: 6,
-      title: "EFootball League Broadcast",
-      description: "Live casting for the EFootball League matches, providing detailed tactical analysis and engaging commentary.",
-      image: "/images/project6.jpg",
-      demo: "#",
+      title: "TOURNAMENT INFORMATION & PRACTISE CUSTOM ROOM'S",
+      description: "Tournament information, practice custom room schedule, registration details, match format, and prize breakdown — everything you need to get started now!",
+      image: "/images/TOURNAMENT INFORMATION.jpg",
+      demo: "https://www.youtube.com/watch?v=hOZKOYdIFZ0",
       category: "live",
-      tags: ["EFootball", "League", "Live Broadcast"],
+      tags: ["Tournament", "Live", "Esports"],
     },
   ];
 
@@ -91,11 +91,11 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 rounded-full mb-4">My Work</span>
-          <h2 className="heading-lg text-gray-900 dark:text-white mb-4">Featured Broadcasts</h2>
+          <span className="inline-block px-3 py-1 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 rounded-full mb-4">My Portfolio</span>
+          <h2 className="heading-lg text-gray-900 dark:text-white mb-4">Featured Work</h2>
           <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
           <p className="paragraph text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-4">
-            A collection of my e-sports casting work and commentary highlights.
+            A collection of my Esports casting work and commentary highlights.
           </p>
         </motion.div>
 

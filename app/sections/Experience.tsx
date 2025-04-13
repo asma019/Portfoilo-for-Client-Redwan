@@ -7,63 +7,63 @@ import Image from "next/image";
 const Experience = () => {
   const experiences = [
     {
-      title: "E-sports Caster",
+      title: "MOBILE MANIA 2024",
       company: "Discovery One",
-      location: "Dhaka, Bangladesh (Remote)",
-      period: "2024-01 - Current",
-      description: "I'm an energetic e-sports caster with a passion for competitive gaming. I bring electrifying play-by-play commentary and in-depth game analysis. I connect with audiences using engaging storytelling and expert insights.",
+      location: "Dhaka, Bangladesh (LAN)",
+      period: "2024 July 12",
+      description: "I'm an energetic Esports caster with a passion for competitive gaming. I bring electrifying play-by-play commentary and in-depth game analysis. I connect with audiences using engaging storytelling and expert insights.",
       achievements: [
-        "Provide commentary for Call Of Duty Mobile and EFootball (Lan) tournaments",
+        "Provide commentary for Call of Duty: Mobile and eFootball (Lan) tournaments",
         "Deliver rapid analytical commentary during high-stakes matches",
         "Engage viewers with enthusiastic and knowledgeable game insights"
       ],
-      image: "/images/exp-discovery.jpg",
+      image: "/images/MOBILE MANIA 2024.jpeg",
       imagePosition: "center center",
-      videoUrl: "https://www.youtube.com/live/kiubB7r1biQ?si=apg_8fkULzENz3zA"
+      videoUrl: "https://www.youtube.com/watch?v=yzVKLOKqbxg"
     },
     {
-      title: "E-sports Caster",
+      title: "Cyber Football Fest",
       company: "Arekta Gaming",
-      location: "Dhaka, Bangladesh (Remote)",
-      period: "2024-01 - Current",
-      description: "Energetic e-sports caster igniting excitement in every match. Expert in translating gameplay into captivating commentary. Your guide through thrilling digital battles and strategy. Bringing passion, insight, and adrenaline to the stage.",
+      location: "Dhaka, Bangladesh (LAN)",
+      period: "2024 May 04",
+      description: "Energetic Esports caster igniting excitement in every match. Expert in translating gameplay into captivating commentary. Your guide through thrilling digital battles and strategy. Bringing passion, insight, and adrenaline to the stage.",
       achievements: [
         "Worked on EFootball and EA FC Mobile (Lan) tournaments",
         "Delivered dynamic play-by-play commentary during intense matches",
         "Provided expert analysis and strategic insights for the audience"
       ],
-      image: "/images/exp-arekta.jpg",
+      image: "/images/Cyber Football Fest.jpeg",
       imagePosition: "center top",
-      videoUrl: "https://www.youtube.com/live/yzVKLOKqbxg"
+      videoUrl: "https://www.facebook.com/share/p/16GYsBcjzh/"
     },
     {
-      title: "E-sports Caster",
-      company: "Zenetic Esports",
-      location: "Dhaka, Bangladesh (Remote)",
-      period: "2024-01 - Current",
-      description: "Passionate e-sports caster who fuses expert analysis with electrifying energy to captivate the gaming community.",
-      achievements: [
-        "Worked on EFootball and EA FC Mobile (LAN) tournaments",
-        "Delivered comprehensive game analysis during competitive matches",
-        "Created engaging commentary that resonated with the gaming audience"
-      ],
-      image: "/images/exp-zenetic.jpg",
-      imagePosition: "center 30%",
-      videoUrl: null
-    },
-    {
-      title: "E-sports Caster",
+      title: "Campus Battle 2024",
       company: "Liquid Esports",
-      location: "Dhaka, Bangladesh (Remote)",
-      period: "2021-01 - Current",
-      description: "Energetic e-sports caster bringing passion, expert insights, and electrifying play-by-play action to every match. Dynamic and engaging commentary that keeps you at the edge of your seat. Your go-to guide for the latest in competitive gaming thrills.",
+      location: "Dhaka, Bangladesh (LAN)",
+      period: "2024 August 30",
+      description: "Energetic Esports caster igniting excitement in every match. Expert in translating gameplay into captivating commentary. Your guide through thrilling digital battles and strategy. Bringing passion, insight, and adrenaline to the stage.",
+      achievements: [
+        "Worked on Free Fire (LAN + Online) tournaments",
+        "Delivered dynamic play-by-play commentary during intense matches",
+        "Provided expert analysis and strategic insights for the audience"
+      ],
+      image: "/images/Campus Battle 2024.jpeg",
+      imagePosition: "center top",
+      videoUrl: "https://www.youtube.com/channel/UCiAWWixR5FvT3Fk3JCHu1xQ"
+    },
+    {
+      title: "RTB ESPORTS FEST 2025",
+      company: "RTB Esports",
+      location: "Dhaka, Bangladesh (LAN)",
+      period: "2025 Upcoming",
+      description: "Energetic Esports caster bringing passion, expert insights, and electrifying play-by-play action to every match. Dynamic and engaging commentary that keeps you at the edge of your seat. Your go-to guide for the latest in competitive gaming thrills.",
       achievements: [
         "Worked on Free Fire (LAN + Online) tournaments",
         "Delivered high-energy commentary for major competitive events",
         "Provided in-depth analysis and strategic breakdowns of gameplay"
       ],
-      image: "/images/exp-liquid.jpg",
-      imagePosition: "center 40%",
+      image: "/images/RTB ESPORTS FEST 2025.jpg",
+      imagePosition: "center top",
       videoUrl: null
     }
   ];
@@ -85,9 +85,10 @@ const Experience = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 rounded-full mb-4">Experience</span>
-          <h2 className="heading-lg text-gray-900 dark:text-white mb-4">Professional Journey</h2>
+          <span className="inline-block px-3 py-1 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/40 rounded-full mb-4">Professional Journey</span>
+          <h2 className="heading-lg text-gray-900 dark:text-white mb-4">Work Experience</h2>
           <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto"></div>
+          <p className="text-gray-600 dark:text-gray-400">My professional journey in the esports industry has been a thrilling ride, filled with unforgettable moments and valuable lessons </p>
         </motion.div>
 
         <div className="space-y-20">
@@ -297,7 +298,7 @@ const Experience = () => {
             <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
               <FiCalendar className="text-blue-600 dark:text-blue-400 text-2xl group-hover:text-white transition-colors duration-300" />
             </div>
-            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">50+</div>
+            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">275+</div>
             <div className="text-gray-600 dark:text-gray-400">Events Casted</div>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-lg transition-all duration-300 text-center relative overflow-hidden group hover:-translate-y-1">
@@ -305,7 +306,7 @@ const Experience = () => {
             <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
               <FiGlobe className="text-blue-600 dark:text-blue-400 text-2xl group-hover:text-white transition-colors duration-300" />
             </div>
-            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">4</div>
+            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">40+</div>
             <div className="text-gray-600 dark:text-gray-400">Organizations</div>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-lg transition-all duration-300 text-center relative overflow-hidden group hover:-translate-y-1">
@@ -313,7 +314,7 @@ const Experience = () => {
             <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
               <FiExternalLink className="text-blue-600 dark:text-blue-400 text-2xl group-hover:text-white transition-colors duration-300" />
             </div>
-            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">10K+</div>
+            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">1.5M+</div>
             <div className="text-gray-600 dark:text-gray-400">Viewers Reached</div>
           </div>
         </motion.div>
